@@ -27,7 +27,20 @@
       "component": "description.project-description"
     },
     "img": {
-      "type": "string",
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "stack": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.stack-item",
       "required": true
     }
   }
